@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Server, Zap, Shield } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import backendIcon from "@/assets/backend-icon.jpg";
 
 const About = () => {
   const { t } = useLanguage();
@@ -38,15 +37,8 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-          <div className="space-y-4 animate-fade-in">
-            <div className="relative">
-              <img 
-                src={backendIcon} 
-                alt="Backend Development"
-                className="w-full rounded-lg border border-primary/20 shadow-glow"
-              />
-            </div>
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="space-y-6 animate-fade-in text-center">
             <p className="text-lg text-foreground leading-relaxed">
               {t.about.intro1}
             </p>
@@ -54,20 +46,23 @@ const About = () => {
               {t.about.intro2}
             </p>
           </div>
+        </div>
 
-          <div className="grid gap-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6">
+
             {highlights.map((item, index) => (
               <Card
                 key={item.title}
-                className="p-5 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all hover:shadow-glow group"
+                className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all hover:shadow-glow group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-2 bg-secondary rounded-lg text-primary group-hover:scale-110 transition-transform">
-                    <item.icon className="h-5 w-5" />
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="p-4 bg-secondary rounded-lg text-primary group-hover:scale-110 transition-transform">
+                    <item.icon className="h-8 w-8" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1 text-foreground">{item.title}</h3>
+                    <h3 className="font-semibold mb-2 text-foreground text-lg">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </div>
                 </div>
