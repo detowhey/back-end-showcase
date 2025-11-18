@@ -1,26 +1,29 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Github, Linkedin, MessageSquare } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+  
   const contactLinks = [
     {
       icon: Mail,
-      label: "Email",
+      label: t.contact.email,
       value: "seu.email@example.com",
       href: "mailto:seu.email@example.com",
       color: "text-primary",
     },
     {
       icon: Github,
-      label: "GitHub",
+      label: t.contact.github,
       value: "github.com/seu-usuario",
       href: "https://github.com",
       color: "text-foreground",
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
+      label: t.contact.linkedin,
       value: "linkedin.com/in/seu-perfil",
       href: "https://linkedin.com",
       color: "text-primary",
@@ -33,11 +36,11 @@ const Contact = () => {
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Vamos Conversar?
+              {t.contact.title}
             </span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Estou disponível para novos projetos e oportunidades
+            {t.contact.description}
           </p>
         </div>
 
@@ -70,13 +73,13 @@ const Contact = () => {
               onClick={() => window.location.href = 'mailto:seu.email@example.com'}
             >
               <MessageSquare className="mr-2 h-5 w-5" />
-              Enviar Mensagem
+              {t.contact.sendMessage}
             </Button>
           </div>
         </Card>
 
         <div className="mt-12 text-center text-muted-foreground">
-          <p>© 2024 - Desenvolvedor Backend. Todos os direitos reservados.</p>
+          <p>© 2024 - {t.contact.footer}</p>
         </div>
       </div>
     </section>

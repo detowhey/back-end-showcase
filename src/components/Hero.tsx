@@ -1,27 +1,35 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import heroBackground from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero">
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      />
       <div className="absolute inset-0 bg-gradient-primary opacity-50" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="inline-block mb-4 px-4 py-2 bg-secondary/50 backdrop-blur-sm rounded-full border border-primary/20">
-            <span className="text-primary font-mono text-sm">Backend Developer</span>
+            <span className="text-primary font-mono text-sm">{t.hero.badge}</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Desenvolvedor Backend
+            {t.hero.title}
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Especialista em arquiteturas escaláveis e soluções robustas com <span className="text-primary">Java</span>, <span className="text-accent">Kotlin</span> e <span className="text-primary">C#</span>
+            {t.hero.description} <span className="text-primary">Java</span>, <span className="text-accent">Kotlin</span> e <span className="text-primary">C#</span>
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center mb-12">
@@ -31,7 +39,7 @@ const Hero = () => {
               onClick={() => scrollToSection("contact")}
             >
               <Mail className="mr-2 h-5 w-5" />
-              Entre em Contato
+              {t.hero.contactButton}
             </Button>
             <Button 
               size="lg" 
@@ -39,7 +47,7 @@ const Hero = () => {
               className="border-primary/30 hover:bg-primary/10"
               onClick={() => scrollToSection("skills")}
             >
-              Ver Tecnologias
+              {t.hero.viewTech}
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
           </div>

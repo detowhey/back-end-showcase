@@ -1,28 +1,30 @@
 import { Card } from "@/components/ui/card";
 import { Code2, Database, Cloud, Workflow } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Skills = () => {
+  const { t } = useLanguage();
   const skillCategories = [
     {
-      title: "Linguagens",
+      title: t.skills.categories.languages,
       icon: Code2,
       skills: ["Java", "Kotlin", "C#"],
       color: "text-primary",
     },
     {
-      title: "Frameworks",
+      title: t.skills.categories.frameworks,
       icon: Workflow,
       skills: ["Spring Boot", ".NET Core"],
       color: "text-accent",
     },
     {
-      title: "Ferramentas",
+      title: t.skills.categories.tools,
       icon: Cloud,
       skills: ["Apache Kafka", "Azure"],
       color: "text-primary",
     },
     {
-      title: "Banco de Dados",
+      title: t.skills.categories.databases,
       icon: Database,
       skills: ["MongoDB", "SQL Server", "Oracle", "PostgreSQL"],
       color: "text-accent",
@@ -35,11 +37,11 @@ const Skills = () => {
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Tecnologias
+              {t.skills.title}
             </span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Stack completo para desenvolvimento de aplicações enterprise escaláveis e performáticas
+            {t.skills.description}
           </p>
         </div>
 
