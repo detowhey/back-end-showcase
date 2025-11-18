@@ -1,24 +1,27 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, GitBranch } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Projects = () => {
+  const { t } = useLanguage();
+  
   const projects = [
     {
-      title: "Sistema de Microserviços",
-      description: "Arquitetura de microserviços escalável com Spring Boot, Kafka para mensageria e MongoDB para persistência de dados.",
+      title: t.projects.items.microservices.title,
+      description: t.projects.items.microservices.description,
       technologies: ["Java", "Spring Boot", "Kafka", "MongoDB"],
       link: "#",
     },
     {
-      title: "API REST Enterprise",
-      description: "API RESTful robusta desenvolvida em .NET Core com autenticação JWT e integração com SQL Server e Oracle.",
+      title: t.projects.items.api.title,
+      description: t.projects.items.api.description,
       technologies: ["C#", ".NET Core", "SQL Server", "Oracle"],
       link: "#",
     },
     {
-      title: "Plataforma de Eventos",
-      description: "Sistema de processamento de eventos em tempo real com Kotlin, utilizando Apache Kafka e PostgreSQL.",
+      title: t.projects.items.events.title,
+      description: t.projects.items.events.description,
       technologies: ["Kotlin", "Kafka", "PostgreSQL", "Azure"],
       link: "#",
     },
@@ -30,11 +33,11 @@ const Projects = () => {
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Projetos
+              {t.projects.title}
             </span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Alguns dos projetos que desenvolvi utilizando tecnologias backend modernas
+            {t.projects.description}
           </p>
         </div>
 
