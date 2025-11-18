@@ -1,32 +1,56 @@
 import { Card } from "@/components/ui/card";
-import { Code2, Database, Cloud, Workflow } from "lucide-react";
+import { Coffee, Hash, Leaf, Box, Zap, Cloud, Database } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+interface Skill {
+  name: string;
+  icon: typeof Coffee;
+}
 
 const Skills = () => {
   const { t } = useLanguage();
+  const languages: Skill[] = [
+    { name: "Java", icon: Coffee },
+    { name: "Kotlin", icon: Coffee },
+    { name: "C#", icon: Hash },
+  ];
+
+  const frameworks: Skill[] = [
+    { name: "Spring Boot", icon: Leaf },
+    { name: ".NET Core", icon: Box },
+  ];
+
+  const tools: Skill[] = [
+    { name: "Apache Kafka", icon: Zap },
+    { name: "Azure", icon: Cloud },
+  ];
+
+  const databases: Skill[] = [
+    { name: "MongoDB", icon: Database },
+    { name: "SQL Server", icon: Database },
+    { name: "Oracle", icon: Database },
+    { name: "PostgreSQL", icon: Database },
+  ];
+
   const skillCategories = [
     {
       title: t.skills.categories.languages,
-      icon: Code2,
-      skills: ["Java", "Kotlin", "C#"],
+      skills: languages,
       color: "text-primary",
     },
     {
       title: t.skills.categories.frameworks,
-      icon: Workflow,
-      skills: ["Spring Boot", ".NET Core"],
+      skills: frameworks,
       color: "text-accent",
     },
     {
       title: t.skills.categories.tools,
-      icon: Cloud,
-      skills: ["Apache Kafka", "Azure"],
+      skills: tools,
       color: "text-primary",
     },
     {
       title: t.skills.categories.databases,
-      icon: Database,
-      skills: ["MongoDB", "SQL Server", "Oracle", "PostgreSQL"],
+      skills: databases,
       color: "text-accent",
     },
   ];
@@ -45,34 +69,34 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {skillCategories.map((category, index) => (
-            <Card
-              key={category.title}
-              className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all hover:shadow-glow group"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="flex items-start gap-4">
-                <div className={`p-3 bg-secondary rounded-lg ${category.color} group-hover:scale-110 transition-transform`}>
-                  <category.icon className="h-6 w-6" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">
-                    {category.title}
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 bg-secondary/50 rounded-full text-sm border border-border hover:border-primary/50 transition-colors"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+        <div className="space-y-12">
+          {skillCategories.map((category, categoryIndex) => (
+            <div key={category.title}>
+              <h3 className="text-2xl font-semibold mb-6 text-center">
+                <span className={category.color}>{category.title}</span>
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {category.skills.map((skill, skillIndex) => {
+                  const IconComponent = skill.icon;
+                  return (
+                    <Card
+                      key={skill.name}
+                      className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all hover:shadow-glow group animate-fade-in"
+                      style={{ animationDelay: `${(categoryIndex * 4 + skillIndex) * 50}ms` }}
+                    >
+                      <div className="flex flex-col items-center gap-3 text-center">
+                        <div className={`p-3 bg-secondary rounded-lg ${category.color} group-hover:scale-110 transition-transform`}>
+                          <IconComponent className="h-8 w-8" />
+                        </div>
+                        <span className="text-sm font-medium text-foreground">
+                          {skill.name}
+                        </span>
+                      </div>
+                    </Card>
+                  );
+                })}
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
