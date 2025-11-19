@@ -5,7 +5,7 @@ export const translations = {
     hero: {
       badge: "Desenvolvedor Backend",
       title: "Desenvolvedor Backend",
-      description: "Especialista em arquiteturas escaláveis e soluções robustas com",
+      description: "Arquiteturas escaláveis e soluções robustas com",
       contactButton: "Entre em Contato",
       viewTech: "Ver Tecnologias"
     },
@@ -39,22 +39,15 @@ export const translations = {
         }
       }
     },
-    projects: {
-      title: "Projetos",
-      description: "Alguns dos projetos que desenvolvi utilizando tecnologias backend modernas",
-      items: {
-        microservices: {
-          title: "Sistema de Microserviços",
-          description: "Arquitetura de microserviços escalável com Spring Boot, Kafka para mensageria e MongoDB para persistência de dados."
-        },
-        api: {
-          title: "API REST Enterprise",
-          description: "API RESTful robusta desenvolvida em .NET Core com autenticação JWT e integração com SQL Server e Oracle."
-        },
-        events: {
-          title: "Plataforma de Eventos",
-          description: "Sistema de processamento de eventos em tempo real com Kotlin, utilizando Apache Kafka e PostgreSQL."
-        }
+    certifications: {
+      title: "Certificações",
+      description: "Certificações profissionais que validam minha expertise em tecnologias cloud",
+      azure: {
+        title: "Microsoft Azure Fundamentals",
+        code: "AZ-900",
+        description: "Certificação fundamental da Microsoft Azure cobrindo conceitos de cloud, serviços principais, segurança, privacidade, conformidade e preços.",
+        issuer: "Microsoft",
+        viewCredential: "Ver Credencial"
       }
     },
     contact: {
@@ -71,7 +64,7 @@ export const translations = {
     hero: {
       badge: "Backend Developer",
       title: "Backend Developer",
-      description: "Specialist in scalable architectures and robust solutions with",
+      description: "Scalable architectures and robust solutions with",
       contactButton: "Get in Touch",
       viewTech: "View Technologies"
     },
@@ -93,7 +86,7 @@ export const translations = {
       highlights: {
         architecture: {
           title: "Scalable Architecture",
-          description: "Development of robust and scalable systems for high request volumes"
+          description: "Development of robust and scalable systems for high volume requests"
         },
         performance: {
           title: "Performance",
@@ -105,22 +98,15 @@ export const translations = {
         }
       }
     },
-    projects: {
-      title: "Projects",
-      description: "Some of the projects I've developed using modern backend technologies",
-      items: {
-        microservices: {
-          title: "Microservices System",
-          description: "Scalable microservices architecture with Spring Boot, Kafka for messaging, and MongoDB for data persistence."
-        },
-        api: {
-          title: "Enterprise REST API",
-          description: "Robust RESTful API developed in .NET Core with JWT authentication and integration with SQL Server and Oracle."
-        },
-        events: {
-          title: "Events Platform",
-          description: "Real-time event processing system with Kotlin, using Apache Kafka and PostgreSQL."
-        }
+    certifications: {
+      title: "Certifications",
+      description: "Professional certifications that validate my expertise in cloud technologies",
+      azure: {
+        title: "Microsoft Azure Fundamentals",
+        code: "AZ-900",
+        description: "Microsoft Azure fundamental certification covering cloud concepts, core services, security, privacy, compliance, and pricing.",
+        issuer: "Microsoft",
+        viewCredential: "View Credential"
       }
     },
     contact: {
@@ -137,7 +123,7 @@ export const translations = {
     hero: {
       badge: "Desarrollador Backend",
       title: "Desarrollador Backend",
-      description: "Especialista en arquitecturas escalables y soluciones robustas con",
+      description: "Arquitecturas escalables y soluciones robustas con",
       contactButton: "Contáctame",
       viewTech: "Ver Tecnologías"
     },
@@ -171,22 +157,15 @@ export const translations = {
         }
       }
     },
-    projects: {
-      title: "Proyectos",
-      description: "Algunos de los proyectos que he desarrollado utilizando tecnologías backend modernas",
-      items: {
-        microservices: {
-          title: "Sistema de Microservicios",
-          description: "Arquitectura de microservicios escalable con Spring Boot, Kafka para mensajería y MongoDB para persistencia de datos."
-        },
-        api: {
-          title: "API REST Empresarial",
-          description: "API RESTful robusta desarrollada en .NET Core con autenticación JWT e integración con SQL Server y Oracle."
-        },
-        events: {
-          title: "Plataforma de Eventos",
-          description: "Sistema de procesamiento de eventos en tiempo real con Kotlin, utilizando Apache Kafka y PostgreSQL."
-        }
+    certifications: {
+      title: "Certificaciones",
+      description: "Certificaciones profesionales que validan mi experiencia en tecnologías cloud",
+      azure: {
+        title: "Microsoft Azure Fundamentals",
+        code: "AZ-900",
+        description: "Certificación fundamental de Microsoft Azure que cubre conceptos de cloud, servicios principales, seguridad, privacidad, cumplimiento y precios.",
+        issuer: "Microsoft",
+        viewCredential: "Ver Credencial"
       }
     },
     contact: {
