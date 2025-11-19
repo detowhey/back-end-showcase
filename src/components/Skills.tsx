@@ -1,35 +1,34 @@
 import { Card } from "@/components/ui/card";
-import { Coffee, Hash, Leaf, Box, Zap, Cloud, Database } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Skill {
   name: string;
-  icon: typeof Coffee;
+  iconClass: string;
 }
 
 const Skills = () => {
   const { t } = useLanguage();
   const languages: Skill[] = [
-    { name: "Java", icon: Coffee },
-    { name: "Kotlin", icon: Coffee },
-    { name: "C#", icon: Hash },
+    { name: "Java", iconClass: "devicon-java-plain colored" },
+    { name: "Kotlin", iconClass: "devicon-kotlin-plain colored" },
+    { name: "C#", iconClass: "devicon-csharp-plain colored" },
   ];
 
   const frameworks: Skill[] = [
-    { name: "Spring Boot", icon: Leaf },
-    { name: ".NET Core", icon: Box },
+    { name: "Spring Boot", iconClass: "devicon-spring-original colored" },
+    { name: ".NET Core", iconClass: "devicon-dot-net-plain colored" },
   ];
 
   const tools: Skill[] = [
-    { name: "Apache Kafka", icon: Zap },
-    { name: "Azure", icon: Cloud },
+    { name: "Apache Kafka", iconClass: "devicon-apachekafka-original colored" },
+    { name: "Azure", iconClass: "devicon-azure-plain colored" },
   ];
 
   const databases: Skill[] = [
-    { name: "MongoDB", icon: Database },
-    { name: "SQL Server", icon: Database },
-    { name: "Oracle", icon: Database },
-    { name: "PostgreSQL", icon: Database },
+    { name: "MongoDB", iconClass: "devicon-mongodb-plain colored" },
+    { name: "SQL Server", iconClass: "devicon-microsoftsqlserver-plain colored" },
+    { name: "Oracle", iconClass: "devicon-oracle-original colored" },
+    { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" },
   ];
 
   const skillCategories = [
@@ -77,16 +76,15 @@ const Skills = () => {
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {category.skills.map((skill, skillIndex) => {
-                  const IconComponent = skill.icon;
                   return (
                     <Card
                       key={skill.name}
-                      className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all hover:shadow-glow group animate-fade-in"
+                      className="p-6 bg-card/80 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all hover:shadow-glow group animate-fade-in"
                       style={{ animationDelay: `${(categoryIndex * 4 + skillIndex) * 50}ms` }}
                     >
                       <div className="flex flex-col items-center gap-3 text-center">
-                        <div className={`p-3 bg-secondary rounded-lg ${category.color} group-hover:scale-110 transition-transform`}>
-                          <IconComponent className="h-8 w-8" />
+                        <div className="p-3 bg-secondary/50 rounded-lg group-hover:scale-110 transition-transform">
+                          <i className={`${skill.iconClass} text-5xl`}></i>
                         </div>
                         <span className="text-sm font-medium text-foreground">
                           {skill.name}
