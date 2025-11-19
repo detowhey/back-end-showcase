@@ -16,12 +16,17 @@ const Skills = () => {
 
   const frameworks: Skill[] = [
     { name: "Spring Boot", iconClass: "devicon-spring-original colored" },
-    { name: ".NET Core", iconClass: "devicon-dot-net-plain colored" },
+    { name: "Quarkus", iconClass: "devicon-quarkus-plain colored" },
+    { name: ".NET Core", iconClass: "devicon-dotnetcore-plain colored" },
   ];
 
   const tools: Skill[] = [
     { name: "Apache Kafka", iconClass: "devicon-apachekafka-original colored" },
     { name: "Azure", iconClass: "devicon-azure-plain colored" },
+    { name: "AWS", iconClass: "devicon-amazonwebservices-plain-wordmark colored" },
+    { name: "Docker", iconClass: "devicon-docker-plain colored" },
+    { name: "GitHub", iconClass: "devicon-github-original" },
+    { name: "GitLab", iconClass: "devicon-gitlab-plain colored" },
   ];
 
   const databases: Skill[] = [
@@ -74,7 +79,7 @@ const Skills = () => {
               <h3 className="text-2xl font-semibold mb-6 text-center">
                 <span className={category.color}>{category.title}</span>
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
                 {category.skills.map((skill, skillIndex) => {
                   return (
                     <Card
