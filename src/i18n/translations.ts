@@ -3,7 +3,7 @@ export type Language = 'pt' | 'en' | 'es';
 export const translations = {
   pt: {
     hero: {
-      badge: "Desenvolvedor Backend",
+      badge: "Olá, bem vindo!",
       title: "Desenvolvedor Backend",
       description: "Arquiteturas escaláveis e soluções robustas com",
       contactButton: "Entre em Contato",
@@ -21,7 +21,7 @@ export const translations = {
     },
     about: {
       title: "Sobre Mim",
-      description: "Desenvolvedor backend apaixonado por criar soluções escaláveis e eficientes",
+      description: "Desenvolvedor backend focado em criar soluções escaláveis e eficientes.",
       intro1: "Com experiência sólida em desenvolvimento backend, especializo-me em criar arquiteturas robustas e escaláveis utilizando as principais tecnologias do mercado.",
       intro2: "Minha expertise abrange desde a construção de APIs RESTful performáticas até a implementação de sistemas de mensageria e processamento distribuído, sempre focando em qualidade de código e boas práticas.",
       highlights: {
@@ -62,7 +62,7 @@ export const translations = {
   },
   en: {
     hero: {
-      badge: "Backend Developer",
+      badge: "Hello, welcome!",
       title: "Backend Developer",
       description: "Scalable architectures and robust solutions with",
       contactButton: "Get in Touch",
@@ -80,7 +80,7 @@ export const translations = {
     },
     about: {
       title: "About Me",
-      description: "Backend developer passionate about creating scalable and efficient solutions",
+      description: "Backend developer focused on creating scalable and efficient solutions",
       intro1: "With solid experience in backend development, I specialize in creating robust and scalable architectures using leading market technologies.",
       intro2: "My expertise ranges from building high-performance RESTful APIs to implementing messaging systems and distributed processing, always focusing on code quality and best practices.",
       highlights: {
@@ -121,7 +121,7 @@ export const translations = {
   },
   es: {
     hero: {
-      badge: "Desarrollador Backend",
+      badge: "¡Hola, bienvenidos!",
       title: "Desarrollador Backend",
       description: "Arquitecturas escalables y soluciones robustas con",
       contactButton: "Contáctame",
@@ -139,7 +139,7 @@ export const translations = {
     },
     about: {
       title: "Sobre Mí",
-      description: "Desarrollador backend apasionado por crear soluciones escalables y eficientes",
+      description: "Desarrollador backend enfocado en crear soluciones escalables y eficientes",
       intro1: "Con experiencia sólida en desarrollo backend, me especializo en crear arquitecturas robustas y escalables utilizando las principales tecnologías del mercado.",
       intro2: "Mi experiencia abarca desde la construcción de APIs RESTful de alto rendimiento hasta la implementación de sistemas de mensajería y procesamiento distribuido, siempre enfocándome en la calidad del código y las mejores prácticas.",
       highlights: {

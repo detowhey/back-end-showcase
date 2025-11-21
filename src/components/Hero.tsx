@@ -28,7 +28,7 @@ const Hero = () => {
             {t.hero.title}
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+         <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             {t.hero.description} <span className="text-primary">Java</span>, <span className="text-accent">Kotlin</span> e <span className="text-primary">C#</span>
           </p>
           
@@ -54,7 +54,7 @@ const Hero = () => {
 
           <div className="flex gap-4 justify-center">
             <a 
-              href="https://github.com" 
+              href="https://github.com/detowhey" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-secondary/50 backdrop-blur-sm rounded-full border border-border hover:border-primary/50 hover:shadow-glow transition-all"
@@ -62,7 +62,7 @@ const Hero = () => {
               <Github className="h-6 w-6 text-foreground" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/henrique-almeida-2bb60a196/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-secondary/50 backdrop-blur-sm rounded-full border border-border hover:border-primary/50 hover:shadow-glow transition-all"

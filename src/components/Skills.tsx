@@ -12,12 +12,14 @@ const Skills = () => {
     { name: "Java", iconClass: "devicon-java-plain colored" },
     { name: "Kotlin", iconClass: "devicon-kotlin-plain colored" },
     { name: "C#", iconClass: "devicon-csharp-plain colored" },
+    { name: "Javascript", iconClass: "devicon-javascript-plain colored" }
   ];
 
   const frameworks: Skill[] = [
     { name: "Spring Boot", iconClass: "devicon-spring-original colored" },
     { name: "Quarkus", iconClass: "devicon-quarkus-plain colored" },
     { name: ".NET Core", iconClass: "devicon-dotnetcore-plain colored" },
+    { name: "NestJS", iconClass: "devicon-nestjs-original colored" }
   ];
 
   const tools: Skill[] = [
@@ -27,13 +29,15 @@ const Skills = () => {
     { name: "Docker", iconClass: "devicon-docker-plain colored" },
     { name: "GitHub", iconClass: "devicon-github-original" },
     { name: "GitLab", iconClass: "devicon-gitlab-plain colored" },
+    { name: "gRPC", iconClass: "devicon-grpc-plain colored" },
+    { name: "Powershell", iconClass: "devicon-powershell-plain colored" }
   ];
 
   const databases: Skill[] = [
-    { name: "MongoDB", iconClass: "devicon-mongodb-plain colored" },
-    { name: "SQL Server", iconClass: "devicon-microsoftsqlserver-plain colored" },
     { name: "Oracle", iconClass: "devicon-oracle-original colored" },
     { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" },
+    { name: "SQL Server", iconClass: "devicon-microsoftsqlserver-plain colored" },
+    { name: "MongoDB", iconClass: "devicon-mongodb-plain colored" },
   ];
 
   const skillCategories = [
@@ -60,7 +64,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4">
+    <section id="skills" className="py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -73,7 +77,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-20">
           {skillCategories.map((category, categoryIndex) => (
             <div key={category.title}>
               <h3 className="text-2xl font-semibold mb-6 text-center">

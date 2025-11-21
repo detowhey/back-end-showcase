@@ -10,22 +10,22 @@ const Contact = () => {
     {
       icon: Mail,
       label: t.contact.email,
-      value: "seu.email@example.com",
-      href: "mailto:seu.email@example.com",
+      value: "henriquefr.almeida@gmail.com",
+      href: "mailto:henriquefr.almeida@gmail.com",
       color: "text-primary",
     },
     {
       icon: Github,
       label: t.contact.github,
-      value: "github.com/seu-usuario",
-      href: "https://github.com",
+      value: "github.com/detowhey",
+      href: "https://github.com/detowhey",
       color: "text-foreground",
     },
     {
       icon: Linkedin,
       label: t.contact.linkedin,
-      value: "linkedin.com/in/seu-perfil",
-      href: "https://linkedin.com",
+      value: "linkedin.com/in/henrque-almeida",
+      href: "https://www.linkedin.com/in/henrique-almeida-2bb60a196/",
       color: "text-primary",
     },
   ];
