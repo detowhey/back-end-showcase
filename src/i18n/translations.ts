@@ -57,7 +57,7 @@ export const translations = {
       github: "GitHub",
       linkedin: "LinkedIn",
       sendMessage: "Enviar Mensagem",
-      footer: "Desenvolvedor Backend. Todos os direitos reservados."
+      footer: "Henrique Almeida. Todos os direitos reservados."
     }
   },
   en: {
@@ -116,7 +116,7 @@ export const translations = {
       github: "GitHub",
       linkedin: "LinkedIn",
       sendMessage: "Send Message",
-      footer: "Backend Developer. All rights reserved."
+      footer: "Henrique Almeida. All rights reserved."
     }
   },
   es: {
@@ -175,7 +175,7 @@ export const translations = {
       github: "GitHub",
       linkedin: "LinkedIn",
       sendMessage: "Enviar Mensaje",
-      footer: "Desarrollador Backend. Todos los derechos reservados."
+      footer: "Henrique Almeida. Todos los derechos reservados."
     }
   }
 };

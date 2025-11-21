@@ -79,7 +79,7 @@ const Contact = () => {
         </Card>
 
         <div className="mt-12 text-center text-muted-foreground">
-          <p>© 2024 - {t.contact.footer}</p>
+          <p>© 2023 - {t.contact.footer}</p>
         </div>
       </div>
     </section>
