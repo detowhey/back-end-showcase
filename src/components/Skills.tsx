@@ -12,14 +12,14 @@ const Skills = () => {
     { name: "Java", iconClass: "devicon-java-plain colored" },
     { name: "Kotlin", iconClass: "devicon-kotlin-plain colored" },
     { name: "C#", iconClass: "devicon-csharp-plain colored" },
-    { name: "Javascript", iconClass: "devicon-javascript-plain colored" }
+    { name: "Scala", iconClass: "devicon-scala-plain colored" }
   ];
 
   const frameworks: Skill[] = [
     { name: "Spring Boot", iconClass: "devicon-spring-original colored" },
     { name: "Quarkus", iconClass: "devicon-quarkus-plain colored" },
-    { name: ".NET Core", iconClass: "devicon-dotnetcore-plain colored" },
-    { name: "NestJS", iconClass: "devicon-nestjs-original colored" }
+    { name: ".NET", iconClass: "devicon-dot-net-plain-wordmark colored" },
+    { name: ".NET Core", iconClass: "devicon-dotnetcore-plain colored" }
   ];
 
   const tools: Skill[] = [
